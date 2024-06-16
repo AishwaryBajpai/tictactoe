@@ -8,7 +8,7 @@ const App = () =>{
   const [ board, setBoard] = useState(Array(9).fill(null));
   const [ isXNext , setisXNext ] = useState(false);
   
-  const winner = calculateWinner(board);
+  const {winner,winningSquare} = calculateWinner(board);
   const allfill = getallfill(board);
   const message = winner ? `winner is ${winner}` : allfill ? `match tied.Pls reset to start new game` :`next player is ${ isXNext ? 'X' : 'O' }`;
   
@@ -37,7 +37,7 @@ const App = () =>{
     <div className='app'>
      <h1>TIC TAC TOE</h1>
      <h4>{message}</h4>
-     <Board board={board} handleSquareClick = {handleSquareClick} />
+     <Board board={board} handleSquareClick = {handleSquareClick} winningSquare={winningSquare}/>
      <Reset onClick={()=>handleResetClick()} winner={winner} />
     </div>
   );
