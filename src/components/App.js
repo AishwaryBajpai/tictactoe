@@ -38,7 +38,7 @@ const App = () =>{
      <h1>TIC TAC TOE</h1>
      <h4>{message}</h4>
      <Board board={board} handleSquareClick = {handleSquareClick} />
-     <Reset onClick={()=>handleResetClick()} />
+     <Reset onClick={()=>handleResetClick()} winner={winner} />
     </div>
   );
 };

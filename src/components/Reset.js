@@ -1,7 +1,7 @@
 
-const Reset = ({onClick}) =>{
+const Reset = ({onClick,winner}) =>{
     return(
-        <button className="reset" onClick={onClick}>Reset</button>       
+        <button className={`reset ${winner ? 'active': ''}`} onClick={onClick}>Reset</button>       
     );
 
 };
