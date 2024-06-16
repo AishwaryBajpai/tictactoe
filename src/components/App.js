@@ -30,6 +30,7 @@ const App = () =>{
 
   const handleResetClick = () => {
       setBoard(Array(9).fill(null));
+      setisXNext(false);
   }
 
   return (
